@@ -1,0 +1,4 @@
+An IRC bot that uses Roslyn to parse C# code
+
+[TODO]
+* Run in a sandbox
