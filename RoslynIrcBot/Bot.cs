@@ -104,25 +104,25 @@ namespace RoslynIrcBot
         private ScriptExecuter _executer = new ScriptExecuter();
         private void RunInSandbox(string code)
         {
-            Evidence ev = new Evidence();
-            ev.AddHostEvidence(new Zone(SecurityZone.Internet));
-            PermissionSet pset = SecurityManager.GetStandardSandbox(ev);
+            //Evidence ev = new Evidence();
+            //ev.AddHostEvidence(new Zone(SecurityZone.MyComputer));
+            //PermissionSet pset = SecurityManager.GetStandardSandbox(ev);
 
-            AppDomainSetup ads = new AppDomainSetup();
-            ads.ApplicationBase = @"W:\Filip\Work\Programming\Projects\Avoid-The-Monsters\RoslynIrcBot\RoslynIrcBot\bin\Debug";
+            //AppDomainSetup ads = new AppDomainSetup();
+            //ads.ApplicationBase = @"W:\Filip\Work\Programming\Projects\Avoid-The-Monsters\RoslynIrcBot\RoslynIrcBot\bin\Debug";
 
-            // Create the sandboxed domain.
-            AppDomain sandbox = AppDomain.CreateDomain(
-                "Sandboxed Domain", ev, ads, pset);
-               //ev,
-               //ads,
-               //pset,
-               //null);
-            var remoteWorker = (ScriptExecuter)sandbox.CreateInstanceAndUnwrap(
-            "RoslynIrcBot", "RoslynIrcBot.ScriptExecuter");
+            //// Create the sandboxed domain.
+            //AppDomain sandbox = AppDomain.CreateDomain(
+            //    "Sandboxed Domain", ev, ads, pset);
+            //   //ev,
+            //   //ads,
+            //   //pset,
+            //   //null);
+            //var remoteWorker = (ScriptExecuter)sandbox.CreateInstanceAndUnwrap(
+            //"RoslynIrcBot", "RoslynIrcBot.ScriptExecuter");
             try
             {
-                var result = remoteWorker.Execute(code);
+                var result = _executer.Execute(code);
                 if (result != null)
                     Response(result.Replace(System.Environment.NewLine, " ").Replace("\n", " ").Replace("\r", " "));
             }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Roslyn.Compilers.CSharp;
 using Roslyn.Scripting.CSharp;
 using Roslyn.Scripting;
@@ -12,10 +13,10 @@ namespace RoslynIrcBot
 
         public string Execute(string code)
         {
-            var engine = new ScriptEngine();
+            var engine = new ScriptEngine(new []{"System"});
             
             var session = Session.Create(Host);
-
+            engine.Execute("using System;", session);
             try
             {
                 if (!Validate(code)) return "Not implemeted";
@@ -47,8 +48,8 @@ namespace RoslynIrcBot
                 {
                     if (!ScanSyntax(syntaxNode.ChildNodes())) return false;
                 }
-
-                if (syntaxNode is InvocationExpressionSyntax && ((InvocationExpressionSyntax)syntaxNode).Expression is MemberAccessExpressionSyntax) return false;
+                Console.WriteLine(syntaxNode.GetType());
+                if (syntaxNode is QualifiedNameSyntax || syntaxNode is InvocationExpressionSyntax && ((InvocationExpressionSyntax)syntaxNode).Expression is MemberAccessExpressionSyntax) return false;
             }
 
             return true;
