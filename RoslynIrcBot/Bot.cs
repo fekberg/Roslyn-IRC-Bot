@@ -109,7 +109,7 @@ namespace RoslynIrcBot
             PermissionSet pset = SecurityManager.GetStandardSandbox(ev);
 
             AppDomainSetup ads = new AppDomainSetup();
-            ads.ApplicationBase = @"W:\Filip\Work\Programming\Projects\Avoid-The-Monsters\RoslynIrcBot\RoslynIrcBot\bin\Debug";
+            ads.ApplicationBase = @"W:\Sandbox";
 
             // Create the sandboxed domain.
             AppDomain sandbox = AppDomain.CreateDomain(
