@@ -12,7 +12,7 @@
       <Value Profile="(Default)">RoslynBot</Value>
     </Setting>
     <Setting Name="User" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">USER ZeWhore 8 * :I'm a C# irc weather bot by frW</Value>
+      <Value Profile="(Default)">USER RoslynBot 8 * :I'm a C# Parsing bot by fekberg</Value>
     </Setting>
     <Setting Name="StartUpChannels" Type="System.Collections.Specialized.StringCollection" Scope="Application">
       <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
