@@ -13,7 +13,7 @@ namespace RoslynIrcBot {
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "10.0.0.0")]
-    internal sealed partial class BotSettings : global::System.Configuration.ApplicationSettingsBase {
+    public sealed partial class BotSettings : global::System.Configuration.ApplicationSettingsBase {
         
         private static BotSettings defaultInstance = ((BotSettings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new BotSettings())));
         
@@ -43,27 +43,9 @@ namespace RoslynIrcBot {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("RoslynBot")]
-        public string Name {
-            get {
-                return ((string)(this["Name"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("USER ZeWhore 8 * :I\'m a C# irc weather bot by frW")]
-        public string User {
-            get {
-                return ((string)(this["User"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ArrayOfString xmlns:xsi=\"http://www.w3." +
             "org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n  <s" +
-            "tring>#RoslynBot</string>\r\n</ArrayOfString>")]
+            "tring>##csharp-bot</string>\r\n</ArrayOfString>")]
         public global::System.Collections.Specialized.StringCollection StartUpChannels {
             get {
                 return ((global::System.Collections.Specialized.StringCollection)(this["StartUpChannels"]));
@@ -81,6 +63,24 @@ namespace RoslynIrcBot {
             }
             set {
                 this["Commands"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("seesharp")]
+        public string Name {
+            get {
+                return ((string)(this["Name"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("USER SeeSharp 8 * :I\'m a csharp irc roslyn bot by frW")]
+        public string User {
+            get {
+                return ((string)(this["User"]));
             }
         }
     }

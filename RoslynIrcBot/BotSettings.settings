@@ -8,16 +8,10 @@
     <Setting Name="Port" Type="System.Int32" Scope="Application">
       <Value Profile="(Default)">6667</Value>
     </Setting>
-    <Setting Name="Name" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">RoslynBot</Value>
-    </Setting>
-    <Setting Name="User" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">USER RoslynBot 8 * :I'm a C# Parsing bot by fekberg</Value>
-    </Setting>
     <Setting Name="StartUpChannels" Type="System.Collections.Specialized.StringCollection" Scope="Application">
       <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;string&gt;#RoslynBot&lt;/string&gt;
+  &lt;string&gt;##csharp-bot&lt;/string&gt;
 &lt;/ArrayOfString&gt;</Value>
     </Setting>
     <Setting Name="Commands" Type="System.Collections.Specialized.StringCollection" Scope="User">
@@ -25,6 +19,12 @@
         &lt;?xml version="1.0" encoding="utf-16"?&gt;
         &lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" /&gt;
       </Value>
+    </Setting>
+    <Setting Name="Name" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">seesharp</Value>
+    </Setting>
+    <Setting Name="User" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">USER SeeSharp 8 * :I'm a csharp irc roslyn bot by frW</Value>
     </Setting>
   </Settings>
 </SettingsFile>
