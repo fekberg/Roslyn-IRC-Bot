@@ -18,7 +18,7 @@ namespace RoslynIrcBot
             Thread.CurrentThread.CurrentCulture = new CultureInfo("en");
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
 
-            var bot = new NewBot.Bot();
+            var bot = new Bot();
 
             bot.Start();
         }
