@@ -35,3 +35,6 @@ In order to compile and run the code, read the blog post stated above.
 Then you need to setup an SQL Server database and execute the sql queries in "CreateDB.sql"
 
 After that, compile the solution and install the Rossbot Windows Service in the "Rossbot.Windows.Service.Installer" project, after that, you should be able to run RoslynIrcBot.exe from the "RoslynIrcBot" project
+
+### License
+All included software is licensed under the MIT License available in full in the LICENSE file.
